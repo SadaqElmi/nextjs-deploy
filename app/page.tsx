@@ -1,5 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Zap, Shield, Sparkles, Users, TrendingUp, Globe } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Zap,
+  Shield,
+  Sparkles,
+  Users,
+  TrendingUp,
+  Globe,
+  Star,
+  Quote,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,19 +23,19 @@ export default function Home() {
             <Sparkles className="size-4 text-primary" />
             <span className="text-muted-foreground">Welcome to the future</span>
           </div>
-          
+
           <h1 className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
             Build Something
             <span className="block bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               Extraordinary
             </span>
           </h1>
-          
+
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Transform your ideas into reality with our powerful platform. 
+            Transform your ideas into reality with our powerful platform.
             Simple, fast, and designed for the modern world.
           </p>
-          
+
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="group text-base">
               <Link href="#">
@@ -50,7 +61,7 @@ export default function Home() {
               Powerful features designed to help you succeed
             </p>
           </div>
-          
+
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
               <div className="mb-4 inline-flex size-12 items-center justify-center rounded-lg bg-primary/10">
@@ -58,27 +69,30 @@ export default function Home() {
               </div>
               <h3 className="mb-2 text-xl font-semibold">Lightning Fast</h3>
               <p className="text-muted-foreground">
-                Built for speed and performance. Experience the difference with our optimized platform.
+                Built for speed and performance. Experience the difference with
+                our optimized platform.
               </p>
             </div>
-            
+
             <div className="rounded-lg border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
               <div className="mb-4 inline-flex size-12 items-center justify-center rounded-lg bg-primary/10">
                 <Shield className="size-6 text-primary" />
               </div>
               <h3 className="mb-2 text-xl font-semibold">Secure & Reliable</h3>
               <p className="text-muted-foreground">
-                Your data is protected with enterprise-grade security and 99.9% uptime guarantee.
+                Your data is protected with enterprise-grade security and 99.9%
+                uptime guarantee.
               </p>
             </div>
-            
+
             <div className="rounded-lg border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
               <div className="mb-4 inline-flex size-12 items-center justify-center rounded-lg bg-primary/10">
                 <CheckCircle2 className="size-6 text-primary" />
               </div>
               <h3 className="mb-2 text-xl font-semibold">Easy to Use</h3>
               <p className="text-muted-foreground">
-                Intuitive interface that makes complex tasks simple. Get started in minutes, not hours.
+                Intuitive interface that makes complex tasks simple. Get started
+                in minutes, not hours.
               </p>
             </div>
           </div>
@@ -96,7 +110,7 @@ export default function Home() {
               Join a growing community of creators and innovators
             </p>
           </div>
-          
+
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div className="text-center">
               <div className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-primary/10">
@@ -105,15 +119,17 @@ export default function Home() {
               <div className="mb-2 text-4xl font-bold tracking-tight">50K+</div>
               <p className="text-muted-foreground">Active Users</p>
             </div>
-            
+
             <div className="text-center">
               <div className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-primary/10">
                 <TrendingUp className="size-8 text-primary" />
               </div>
-              <div className="mb-2 text-4xl font-bold tracking-tight">99.9%</div>
+              <div className="mb-2 text-4xl font-bold tracking-tight">
+                99.9%
+              </div>
               <p className="text-muted-foreground">Uptime</p>
             </div>
-            
+
             <div className="text-center">
               <div className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-primary/10">
                 <Globe className="size-8 text-primary" />
@@ -121,13 +137,108 @@ export default function Home() {
               <div className="mb-2 text-4xl font-bold tracking-tight">150+</div>
               <p className="text-muted-foreground">Countries</p>
             </div>
-            
+
             <div className="text-center">
               <div className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-primary/10">
                 <Sparkles className="size-8 text-primary" />
               </div>
               <div className="mb-2 text-4xl font-bold tracking-tight">1M+</div>
               <p className="text-muted-foreground">Projects Created</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="border-t bg-muted/30 py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              What our users say
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              Don't just take our word for it - hear from our community
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-lg border bg-card p-6 shadow-sm">
+              <div className="mb-4 flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="size-4 fill-yellow-400 text-yellow-400"
+                  />
+                ))}
+              </div>
+              <Quote className="mb-4 size-6 text-primary/50" />
+              <p className="mb-4 text-muted-foreground">
+                "This platform has completely transformed how we work. The speed
+                and reliability are unmatched. Highly recommend!"
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Users className="size-5 text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold">Sarah Johnson</div>
+                  <div className="text-sm text-muted-foreground">
+                    Product Manager
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-lg border bg-card p-6 shadow-sm">
+              <div className="mb-4 flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="size-4 fill-yellow-400 text-yellow-400"
+                  />
+                ))}
+              </div>
+              <Quote className="mb-4 size-6 text-primary/50" />
+              <p className="mb-4 text-muted-foreground">
+                "Incredibly easy to use and the support team is fantastic. We've
+                seen a 300% increase in productivity since switching."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Users className="size-5 text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold">Michael Chen</div>
+                  <div className="text-sm text-muted-foreground">CTO</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-lg border bg-card p-6 shadow-sm">
+              <div className="mb-4 flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="size-4 fill-yellow-400 text-yellow-400"
+                  />
+                ))}
+              </div>
+              <Quote className="mb-4 size-6 text-primary/50" />
+              <p className="mb-4 text-muted-foreground">
+                "The best investment we've made this year. The features are
+                exactly what we needed, and the platform scales beautifully."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Users className="size-5 text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold">Emily Rodriguez</div>
+                  <div className="text-sm text-muted-foreground">
+                    Founder & CEO
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
