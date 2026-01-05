@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Zap, Shield, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Zap, Shield, Sparkles, Users, TrendingUp, Globe } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -80,6 +80,54 @@ export default function Home() {
               <p className="text-muted-foreground">
                 Intuitive interface that makes complex tasks simple. Get started in minutes, not hours.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="border-t bg-gradient-to-b from-background to-muted/20 py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              Trusted by thousands
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              Join a growing community of creators and innovators
+            </p>
+          </div>
+          
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="text-center">
+              <div className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-primary/10">
+                <Users className="size-8 text-primary" />
+              </div>
+              <div className="mb-2 text-4xl font-bold tracking-tight">50K+</div>
+              <p className="text-muted-foreground">Active Users</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-primary/10">
+                <TrendingUp className="size-8 text-primary" />
+              </div>
+              <div className="mb-2 text-4xl font-bold tracking-tight">99.9%</div>
+              <p className="text-muted-foreground">Uptime</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-primary/10">
+                <Globe className="size-8 text-primary" />
+              </div>
+              <div className="mb-2 text-4xl font-bold tracking-tight">150+</div>
+              <p className="text-muted-foreground">Countries</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-primary/10">
+                <Sparkles className="size-8 text-primary" />
+              </div>
+              <div className="mb-2 text-4xl font-bold tracking-tight">1M+</div>
+              <p className="text-muted-foreground">Projects Created</p>
             </div>
           </div>
         </div>
